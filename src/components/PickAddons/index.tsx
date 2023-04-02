@@ -22,44 +22,38 @@ function PickAddons({
     <Container>
       <Cards htmlFor='onlineServices' isActive={onlineServices}>
         <CustomCheckBox handleCheckbox={handleOnlineServices} idName='onlineServices' isChecked={onlineServices}/>
-          <div>
-            <TextCardsContent>
-              <CardsTitle>Online Service</CardsTitle>
-              <CardsSubTitle>Access to multiplayer games</CardsSubTitle>
-            </TextCardsContent>
-          </div>
-          <span>
-            {yearly
-            ? '+$10/yr'
-            : '+$1/mo'
-            }
-          </span>
+        <TextCardsContent>
+          <CardsTitle>Online Service</CardsTitle>
+          <CardsSubTitle>Access to multiplayer games</CardsSubTitle>
+        </TextCardsContent>
+        <span>
+          {yearly
+          ? '+$10/yr'
+          : '+$1/mo'
+          }
+        </span>
       </Cards>
 
       <Cards htmlFor='largerStorage' isActive={largerStorage}>
         <CustomCheckBox handleCheckbox={handleLargerStorage} idName='largerStorage' isChecked={largerStorage}/>
-          <div>
-            <TextCardsContent>
-              <CardsTitle>Larger Storage</CardsTitle>
-              <CardsSubTitle>Extra 1TB of cloud save</CardsSubTitle>
-            </TextCardsContent>
-          </div>
-          <span>
-          {yearly
-            ? '+$20/yr'
-            : '+$2/mo'
-          }
-          </span>
+        <TextCardsContent>
+          <CardsTitle>Larger Storage</CardsTitle>
+          <CardsSubTitle>Extra 1TB of cloud save</CardsSubTitle>
+        </TextCardsContent>
+        <span>
+        {yearly
+          ? '+$20/yr'
+          : '+$2/mo'
+        }
+        </span>
       </Cards>
 
       <Cards htmlFor='customizableProfile' isActive={customizableProfile}>
         <CustomCheckBox handleCheckbox={handleCustomizableProfile} idName='customizableProfile' isChecked={customizableProfile}/>
-          <div>
-            <TextCardsContent>
-              <CardsTitle>Customizable Profile</CardsTitle>
-              <CardsSubTitle>Custom theme on your profile</CardsSubTitle>
-            </TextCardsContent>
-          </div>
+          <TextCardsContent>
+            <CardsTitle>Customizable Profile</CardsTitle>
+            <CardsSubTitle>Custom theme on your profile</CardsSubTitle>
+          </TextCardsContent>
           <span>
           {yearly
             ? '+$20/yr'

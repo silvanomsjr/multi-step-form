@@ -15,8 +15,10 @@ export const Container = styled.div`
 
 
   @media (min-width: 768px) {
+    margin-top: .5rem;
     flex-direction: column;
     align-items: flex-start;
+    gap: 2rem;
   }
 
 
@@ -57,7 +59,7 @@ export const Title = styled.h2`
 `
 
 export const Description = styled.span`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 

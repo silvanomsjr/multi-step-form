@@ -31,3 +31,10 @@ export const FormInputItem = styled.input`
   font-size: 16px;
   font-weight: 500;
 `
+
+export const ErrorMessage = styled.span`
+  color: hsl(354, 84%, 57%);
+  font-size: .9rem;
+  font-weight: bold;
+  font-style: italic;
+`

@@ -10,6 +10,12 @@ export default createGlobalStyle`
 
   body{
     background-color: hsl(217, 100%, 97%);
+
+    @media(min-width: 768px){
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
 `

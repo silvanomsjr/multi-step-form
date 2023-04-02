@@ -28,9 +28,6 @@ function ShowResume({ plan, addons, total, yearly }: IShowResumeProps){
     setStep(2)
   }
 
-  console.log('preco addons: ', addonsPrices)
-  console.log('preco planos: ', planPrices)
-
 
   return(
     <Container>

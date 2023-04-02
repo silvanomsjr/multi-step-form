@@ -4,9 +4,13 @@ export const ScreenContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 6.2rem;
+  @media(min-width:768px){
+    padding-top: 0;
+    justify-content: center;
+  }
 `
 
 
@@ -18,17 +22,36 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 2rem 1.5rem;
+  padding: ${({ final }) => final ? '5rem 1.4rem' : '2rem 1.5rem'};
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+  @media(min-width: 768px){
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+  }
 `
 
 export const InfoContent = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: ${({ final }) => final ? 'center' : 'flex-start' };
   flex-direction: column;
   gap: 1.2rem;
+
+  ${({ final }) => final ? (css`
+    & > h1{
+      font-size: 1.6rem 
+    }
+  `) : ''}
+
+  @media(min-width:768px){
+    position: relative;
+    height: 100%;
+  }
+
 `
 
 
@@ -39,16 +62,22 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.p`
   color: hsl(231, 11%, 63%);
+  ${({ final }) => final ? 'text-align: center; width: 100%' : ''}
 `
 export const ButtonContainer = styled.div`
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #FFF;
+  background: transparent;
   padding: 1.5rem;
   display: flex;
   justify-content: ${({ both }) => both ? 'space-between' : 'flex-end'};
+
+  @media(min-width: 768px){
+    padding: 0;
+  }
+
 `
 
 const normalBtn = css`
@@ -78,6 +107,11 @@ export const CustomButton = styled.button`
   outline: none;
   border-radius: 4px;
   cursor: pointer;
+
+  @media(min-width: 768px){
+    border-radius: 8px;
+    padding: 1rem 1.4rem
+  }
 
 `
 
