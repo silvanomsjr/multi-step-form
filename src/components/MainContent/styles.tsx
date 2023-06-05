@@ -9,6 +9,8 @@ export const ScreenContainer = styled.div`
   padding-top: 6.2rem;
   @media(min-width:768px){
     padding-top: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
     justify-content: center;
   }
 `
@@ -41,15 +43,16 @@ export const InfoContent = styled.div`
   flex-direction: column;
   gap: 1.2rem;
 
-  ${({ final }) => final ? (css`
+  ${({ final }) => final && (css`
     & > h1{
       font-size: 1.6rem 
     }
-  `) : ''}
+  `)}
 
   @media(min-width:768px){
     position: relative;
     height: 100%;
+    justify-content: flex-start;
   }
 
 `
@@ -69,7 +72,7 @@ export const ButtonContainer = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  background: transparent;
+  background: #fff;
   padding: 1.5rem;
   display: flex;
   justify-content: ${({ both }) => both ? 'space-between' : 'flex-end'};

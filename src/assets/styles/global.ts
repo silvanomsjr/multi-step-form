@@ -10,6 +10,11 @@ export default createGlobalStyle`
 
   body{
     background-color: hsl(217, 100%, 97%);
+  }
+
+  #root{
+    width: 100%;
+    height: 100vh;
 
     @media(min-width: 768px){
       display: flex;

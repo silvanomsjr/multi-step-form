@@ -15,10 +15,10 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     background-image: ${({bg}) => `url(${bg.bgSidebarDesktop})`};
     height: 100%;
-    width: 40%;
+    width: 100%;
     max-width: 274px;
     position: static;
-    background-size: cover;
+    background-size: 100%;
     padding: 2rem;
     z-index: 999999;
   }
